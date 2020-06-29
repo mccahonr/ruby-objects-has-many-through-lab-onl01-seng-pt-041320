@@ -16,7 +16,7 @@ class Artist
   end
 
   def genres
-    songs.select {|element| element == element(2)}
+    songs.map { |song| song.genre }
   end
 
   def new_song(song_title, genre)
